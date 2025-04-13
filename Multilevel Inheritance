@@ -1,0 +1,17 @@
+class Person:
+    def breathe(self):
+        print("Breathing...")
+
+class Student(Person):
+    def study(self):
+        print("Studying...")
+
+class CollegeStudent(Student):
+    def do_internship(self):
+        print("Doing internship")
+
+# Usage
+victor = CollegeStudent()
+victor.breathe()
+victor.study()
+victor.do_internship()
