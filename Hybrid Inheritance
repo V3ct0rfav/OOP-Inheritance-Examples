@@ -1,0 +1,37 @@
+class Animal {
+    void sleep() {
+        System.out.println("Animal sleeps");
+    }
+}
+
+interface Terrestrial {
+    void walk();
+}
+
+interface Aquatic {
+    void swim();
+}
+
+class Frog extends Animal implements Terrestrial, Aquatic {
+    public void walk() {
+        System.out.println("Frog walks");
+    }
+
+    public void swim() {
+        System.out.println("Frog swims");
+    }
+
+    void croak() {
+        System.out.println("Frog croaks");
+    }
+}
+
+public class HybridInheritance {
+    public static void main(String[] args) {
+        Frog froggy = new Frog();
+        froggy.sleep();
+        froggy.walk();
+        froggy.swim();
+        froggy.croak();
+    }
+}
