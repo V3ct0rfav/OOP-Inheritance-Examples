@@ -1,0 +1,19 @@
+class Animal:
+    def eat(self):
+        print("Eating...")
+
+class Lion(Animal):
+    def roar(self):
+        print("Lion roars")
+
+class Elephant(Animal):
+    def trumpet(self):
+        print("Elephant trumpets")
+
+# Usage
+simba = Lion()
+dumbo = Elephant()
+simba.eat()
+simba.roar()
+dumbo.eat()
+dumbo.trumpet()
