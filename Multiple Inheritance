@@ -1,14 +1,26 @@
-class Flyer:
-    def fly(self):
-        print("Can fly")
+interface Musician {
+    void playInstrument();
+}
 
-class Swimmer:
-    def swim(self):
-        print("Can swim")
+interface Athlete {
+    void playSport();
+}
 
-class Duck(Flyer, Swimmer):
-    pass
+class StudentLeader implements Musician, Athlete {
+    public void playInstrument() {
+        System.out.println("Plays guitar");
+    }
 
-donald = Duck()
-donald.fly()
-donald.swim()
+    public void playSport() {
+        System.out.println("Plays soccer");
+    }
+}
+
+public class MultipleInheritance {
+    public static void main(String[] args) {
+        StudentLeader victor = new StudentLeader();
+        victor.playInstrument();
+        victor.playSport();
+    }
+}
+
