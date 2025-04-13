@@ -1,19 +1,30 @@
-class Animal:
-    def eat(self):
-        print("Eating...")
+class Animal {
+    void eat() {
+        System.out.println("Animal eats");
+    }
+}
 
-class Lion(Animal):
-    def roar(self):
-        print("Lion roars")
+class Lion extends Animal {
+    void roar() {
+        System.out.println("Lion roars");
+    }
+}
 
-class Elephant(Animal):
-    def trumpet(self):
-        print("Elephant trumpets")
+class Elephant extends Animal {
+    void trumpet() {
+        System.out.println("Elephant trumpets");
+    }
+}
 
-# Usage
-simba = Lion()
-dumbo = Elephant()
-simba.eat()
-simba.roar()
-dumbo.eat()
-dumbo.trumpet()
+public class HierarchicalInheritance {
+    public static void main(String[] args) {
+        Lion simba = new Lion();
+        Elephant dumbo = new Elephant();
+
+        simba.eat();
+        simba.roar();
+
+        dumbo.eat();
+        dumbo.trumpet();
+    }
+}
