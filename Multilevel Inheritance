@@ -1,17 +1,26 @@
-class Person:
-    def breathe(self):
-        print("Breathing...")
+class Animal {
+    void breathe() {
+        System.out.println("Animal breathes");
+    }
+}
 
-class Student(Person):
-    def study(self):
-        print("Studying...")
+class Mammal extends Animal {
+    void feedMilk() {
+        System.out.println("Mammal feeds milk");
+    }
+}
 
-class CollegeStudent(Student):
-    def do_internship(self):
-        print("Doing internship")
+class Cat extends Mammal {
+    void meow() {
+        System.out.println("Cat meows");
+    }
+}
 
-# Usage
-victor = CollegeStudent()
-victor.breathe()
-victor.study()
-victor.do_internship()
+public class MultilevelInheritance {
+    public static void main(String[] args) {
+        Cat cat = new Cat();
+        cat.breathe();
+        cat.feedMilk();
+        cat.meow();
+    }
+}
